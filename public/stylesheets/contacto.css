@@ -1,0 +1,55 @@
+
+.contacto,
+.redes{
+    width: 50%;
+    /* background-color: yellow; */
+    box-sizing: border-box;
+}
+
+.contacto{
+    float: left;
+    border-right: 2px solid #2e64a1;
+}
+
+.redes{
+    float: right;
+    padding-left: 10px;
+}
+
+.formulario input,
+.formulario textarea{
+    background-color: #ccc;
+    border-radius: 5px;
+    border: 1px solid #999;
+    padding:5px;
+    /* width: 70%; opcion 1 */
+    width: 93%; 
+}
+
+.formulario label{
+    /* background-color: yellow; */
+    width: 22%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.formulario textarea{
+    resize: none;
+    height: 200px;
+} 
+
+.formulario input[type="submit"] {
+   width: auto;
+   background-color: #6da9ed;
+   color: white;
+   box-shadow: 0 0 5px gray;
+    }
+
+  .centrar{
+    text-align: center;
+  }
+
+.facebook{
+    text-decoration: none;
+    color: black
+}

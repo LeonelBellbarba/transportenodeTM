@@ -1,0 +1,121 @@
+/* font-family: 'Scheherazade New', serif; */
+
+body{
+    font-family: 'Scheherazade New', serif;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+header{
+    background-color: rgb(52, 52, 167);
+    padding: 16px;
+
+}
+
+header h1{
+    color: white;
+    font-size: 2,5em;
+    font-weight: 100;
+    font-style: italic;
+    display: inline-block; /*esto es para colocar todo en la misma linea */
+    position: relative;
+    bottom: 35px;
+    
+}
+
+nav{
+    background-color: rgb(142, 142, 204); 
+    margin-bottom: 20px;
+}
+
+nav ul{
+    
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 16%;
+    background-color: rgb(122, 122, 177);   
+    text-align: center;
+    justify-content: space-between;
+}
+
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+        
+    display: block;
+}
+
+nav ul li:hover{    
+    background-color: rgb(104, 104, 151);
+}
+
+nav ul li a.activo{
+    background-color: rgb(94, 94, 134); ;
+}
+
+footer{
+    background-color: cadetblue;
+    padding: 25px 0;
+    text-align: center;
+    clear: both;
+}
+
+.holder{
+    max-width: 960px;
+    margin: 0 auto;
+    
+}
+
+h2{
+    color: rgb(180, 136, 136);
+    font-weight: 400;
+}
+
+.bienvenido {
+    width: 75%;
+    float: left;
+ 
+    padding-right: 8px;
+    box-sizing: border-box;
+}
+
+.bienvenido p{
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.Testimonios{
+    width: 25%;
+    
+    float: right;
+    
+}
+
+.testimonio{
+    background-color: rgb(46, 89, 90);
+    padding: 12px;
+}
+
+.testimonio .cita{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    /* background-color: coral; */
+    display: black;
+}
+
+.testimonio .autor{
+    font-size: 11px;
+    text-align: center;
+    display: block;
+}
+

@@ -5,8 +5,11 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-
+var nosotrosRouter = require("./routes/nosotros");
+var serviciosRouter = require("./routes/servicios");
+var galeriasRouter = require("./routes/galeria");
+var novedadesRouter = require("./routes/novedades");
+var contactosRouter = require("./routes/contactos");
 var app = express();
 
 // view engine setup
@@ -20,12 +23,26 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use("/nosotros", nosotrosRouter);
+app.use("/servicios", serviciosRouter);
+app.use("/galeria", galeriasRouter);
+app.use("/novedades", novedadesRouter);
+app.use("/contactos", contactosRouter);
+
+
+app.get("/nosotros", function(req, res, next){
+  res.send("hola curso!");
+})
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+
 
 // error handler
 app.use(function(err, req, res, next) {

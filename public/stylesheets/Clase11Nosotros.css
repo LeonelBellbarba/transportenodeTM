@@ -1,0 +1,293 @@
+/* font-family: 'Scheherazade New', serif; */
+
+body{
+    font-family: 'Scheherazade New', serif;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+header{
+    background-color: rgb(52, 52, 167);
+    padding: 16px;
+
+}
+
+header h1{
+    color: white;
+    font-size: 2,5em;
+    font-weight: 100;
+    font-style: italic;
+    display: inline-block; /*esto es para colocar todo en la misma linea */
+    position: relative;
+    bottom: 35px;
+    
+}
+
+nav{
+    background-color: rgb(142, 142, 204); 
+    margin-bottom: 20px;
+}
+
+nav ul{
+    
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 16%;
+    background-color: rgb(122, 122, 177);   
+    text-align: center;
+    justify-content: space-between;
+}
+
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+        
+    display: block;
+}
+
+nav ul li:hover{    
+    background-color: rgb(104, 104, 151);
+}
+
+nav ul li a.activo{
+    background-color: rgb(94, 94, 134); ;
+}
+
+footer{
+    background-color: cadetblue;
+    padding: 25px 0;
+    text-align: center;
+    clear: both;
+}
+
+.holder{
+    max-width: 960px;
+    margin: 0 auto;
+    
+}
+
+h2{
+    color: rgb(180, 136, 136);
+    font-weight: 400;
+}
+
+.bienvenido {
+    width: 75%;
+    float: left;
+ 
+    padding-right: 8px;
+    box-sizing: border-box;
+}
+
+.bienvenido p{
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.Testimonios{
+    width: 25%;
+    
+    float: right;
+    
+}
+
+.testimonio{
+    background-color: rgb(46, 89, 90);
+    padding: 12px;
+}
+
+.testimonio .cita{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+    /* background-color: coral; */
+    display: black;
+}
+
+.testimonio .autor{
+    font-size: 11px;
+    text-align: center;
+    display: block;
+}
+
+
+/* inicio nosotros */
+.historia p{
+    font-size: 13px;
+}
+
+.persona{
+    width: 18%;
+    border: 1px solid royalblue;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.persona img{
+    max-width: 75%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px gray;
+
+    
+}
+
+.persona h5, 
+.persona h6{
+    margin: 0;
+    color: rgb(36, 39, 90);
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.persona h6{
+    font-style: italic;
+    font-weight: 700;
+}
+
+.persona p{
+    font-size: 12px;
+}
+
+.personas{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Servicio */
+.servicio{
+    border: 1px solid rgb(124, 122, 122);
+    border-radius: 8px;
+    padding: 10px;
+    overflow: hidden;   /* ayuda a controlar el alto de las cajas */
+}
+
+.servicio img{
+    border-radius: 8px;
+}
+
+.servicio .info{
+    max-width: 75%;
+}
+
+.servicio .info h4{
+    color: darkcyan;
+    font-size: 23px;
+    font-style: italic;
+    font-weight: 500;
+    border-bottom: 1px solid rgb(77, 144, 221);
+    padding-bottom: 15px;
+    margin: 10px 0;
+}
+
+.servicio.info p{
+    font-size: 13px;
+
+}
+
+.servicio:nth-child(odd) img{
+    float: left;
+    margin: 0 16px 0 0; /* arriba - derecha - abajo- izquierda */
+}
+
+.servicio:nth-child(odd) .info{
+    float: right;
+}
+
+.servicio:nth-child(even) img{ 
+    float: right;
+    margin: 0 0 0 16px;
+}
+
+.servicio:nth-child(even) .info{
+    float: left;
+}
+
+/* Galeria */
+
+.galeria .fotos{
+    border: 1px solid rgba(66, 85, 90, 0.404);
+    /* float: left; */
+    padding: 5px;
+    display: inline-block;
+    width: 17%;
+    box-sizing: border-box;
+    margin-left: 2.5%;
+    margin-bottom: 10px;
+}
+
+.galeria .fotos img{
+    width: 100%;    /* Para ajustar bien la imagen a la caja */
+    display: block;
+}
+
+.galeria .fotos:nth-child(5n+1){
+    margin-left: 0;
+}
+
+/* .galeria .fotos:nth-child(3){
+        Sirve para marcar la 3era imagen   
+} */
+
+
+/* Contacto */
+.contacto,
+.redes{
+    width: 50%;
+    /* background-color: yellow; */
+    box-sizing: border-box;
+}
+
+.contacto{
+    float: left;
+    border-right: 2px solid #2e64a1;
+}
+
+.redes{
+    float: right;
+    padding-left: 10px;
+}
+
+.formulario input,
+.formulario textarea{
+    background-color: #ccc;
+    border-radius: 5px;
+    border: 1px solid #999;
+    padding:5px;
+    /* width: 70%; opcion 1 */
+    width: 93%; 
+}
+
+.formulario label{
+    /* background-color: yellow; */
+    width: 22%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.formulario textarea{
+    resize: none;
+    height: 200px;
+} 
+
+.formulario input[type="submit"] {
+   width: auto;
+   background-color: #6da9ed;
+   color: white;
+   box-shadow: 0 0 5px gray;
+    }
+
+  .centrar{
+    text-align: center;
+  }
+

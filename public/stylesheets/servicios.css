@@ -1,0 +1,50 @@
+.servicio{
+    border: 1px solid rgb(124, 122, 122);
+    border-radius: 8px;
+    padding: 10px;
+    overflow: hidden;   /* ayuda a controlar el alto de las cajas */
+}
+
+.servicio img{
+    border-radius: 8px;
+}
+
+.servicio .info{
+    max-width: 75%;
+}
+
+.servicio .info h4{
+    color: darkcyan;
+    font-size: 23px;
+    font-style: italic;
+    font-weight: 500;
+    border-bottom: 1px solid rgb(77, 144, 221);
+    padding-bottom: 15px;
+    margin: 10px 0;
+}
+
+.servicio.info p{
+    font-size: 13px;
+
+}
+
+.servicio:nth-child(odd) img{
+    float: left;
+    margin: 0 16px 0 0; /* arriba - derecha - abajo- izquierda */
+}
+
+.servicio:nth-child(odd) .info{
+    float: right;
+}
+
+.servicio:nth-child(even) img{ 
+    float: right;
+    margin: 0 0 0 16px;
+}
+
+.servicio:nth-child(even) .info{
+    float: left;
+}
+
+
+
