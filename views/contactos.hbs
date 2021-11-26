@@ -3,25 +3,25 @@
 <main class="holder">
             <div class="contacto">
                 <h2>Contacto rapido</h2>
-                <form action="">
+                <form action="/contactos" method="post" class="formulario">
                     <p>
                         <label for="">Nombre</label>
-                        <input type="text" required>
+                        <input type="text" name="nombre" required>
                     </p>
 
                     <p>
                         <label for="">Email</label>
-                        <input type="email">
+                        <input type="text" name="email">
                     </p>
 
                     <p>
                         <label for="">Telefono</label>
-                        <input type="text" required >
+                        <input type="text" name="tel" required >
                     </p>
 
                     <p>
                         <label for="">Comentarios</label>
-                        <textarea name=""></textarea>
+                        <textarea name="comentarios" ></textarea>
                     </p>
 
                     <p>
@@ -29,7 +29,7 @@
                     </p>
 
 
-
+                <p>{{message}}</p>
                 </form>
             </div>
 

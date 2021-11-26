@@ -25,12 +25,12 @@
     </header>
     <nav>
             <ul class="holder">
-                <li><a href="/">Home           </a></li>
-                <li><a href="/nosotros">Nosotros    </a></li>
-                <li><a href="/servicios">serivicios</a></li>
-                <li><a href="/galeria">galeria      </a></li>
-                <li><a href="/novedades">Novedades  </a></li>
-                <li><a href="/contactos">Contactos  </a></li>
+                <li><a href="/" class="{{#if isHome}}activo{{/if}}">Home           </a></li>
+                <li><a href="/nosotros" class="{{#if isNosotros}}activo{{/if}}">Nosotros    </a></li>
+                <li><a href="/servicios" class="{{#if isServicios}}activo{{/if}}">serivicios</a></li>
+                <li><a href="/galeria" class="{{#if isGaleria}}activo{{/if}}"> galeria      </a></li>
+                <li><a href="/novedades" class="{{#if isNovedades}}activo{{/if}}">Novedades  </a></li>
+                <li><a href="/contactos" class="{{#if isContactos}}activo{{/if}}">Contactos  </a></li>
             </ul>
         </nav>
 
