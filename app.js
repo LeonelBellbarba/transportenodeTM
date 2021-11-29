@@ -15,6 +15,7 @@ var serviciosRouter = require("./routes/servicios");
 var galeriasRouter = require("./routes/galeria");
 var novedadesRouter = require("./routes/novedades");
 var contactosRouter = require("./routes/contactos");
+var loginRouter = require("./routes/admin/login");
 var app = express();
 
 // view engine setup
@@ -33,7 +34,7 @@ app.use("/servicios", serviciosRouter);
 app.use("/galeria", galeriasRouter);
 app.use("/novedades", novedadesRouter);
 app.use("/contactos", contactosRouter);
-
+app.use("/admin/login", loginRouter);
 
 app.get("/nosotros", function(req, res, next){
   res.send("hola curso!");
