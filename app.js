@@ -5,17 +5,19 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 require('dotenv').config(); //para que carge los datos del .env
+var session = require("express-session");
 
 
 
 
-var indexRouter = require('./routes/index');
-var nosotrosRouter = require("./routes/nosotros");
-var serviciosRouter = require("./routes/servicios");
-var galeriasRouter = require("./routes/galeria");
-var novedadesRouter = require("./routes/novedades");
-var contactosRouter = require("./routes/contactos");
-var loginRouter = require("./routes/admin/login");
+var indexRouter = require('./routes/index'); 
+var nosotrosRouter = require("./routes/nosotros"); //nosotros.js
+var serviciosRouter = require("./routes/servicios"); //servicios.js
+var galeriasRouter = require("./routes/galeria"); //galeria.js
+var novedadesRouter = require("./routes/novedades");//novedades.js
+var contactosRouter = require("./routes/contactos");//contactos.js
+var loginRouter = require("./routes/admin/login"); //admin/login
+var adminNovedadesRouter = require("./routes/admin/novedades"); //admin/novedades.js
 var app = express();
 
 // view engine setup
@@ -28,6 +30,29 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+app.use(session({
+  secret: 'asdfasfadadesasarsfasasdadasdsdsad',
+  resave: false,
+  saveUninitialized: true,
+  cookie:{maxAge:6000}
+}));
+
+secured = async function(req, res, next){
+  try{
+    console.log(req.session.id_usuario)
+
+      if(req.session.id_usuario){
+        next()
+      }else{
+        res.redirect("/admin/login")
+      }
+    
+  }catch(error){
+
+  }
+} //cierra secured
+
 app.use('/', indexRouter);
 app.use("/nosotros", nosotrosRouter);
 app.use("/servicios", serviciosRouter);
@@ -35,6 +60,7 @@ app.use("/galeria", galeriasRouter);
 app.use("/novedades", novedadesRouter);
 app.use("/contactos", contactosRouter);
 app.use("/admin/login", loginRouter);
+app.use("/admin/novedades", secured, adminNovedadesRouter)
 
 app.get("/nosotros", function(req, res, next){
   res.send("hola curso!");
