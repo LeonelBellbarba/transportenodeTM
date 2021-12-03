@@ -1,9 +1,57 @@
 <div class="container">
     <div class="row">
+        {{!-- Fila 1 --}}
         <div class="col">
-            <p class="text-end">hola {{usuario}}! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quos, quis voluptatibus tenetur aliquid maxime rem architecto quas, mollitia sint earum inventore saepe cupiditate voluptate modi excepturi suscipit possimus libero? 
+            <p class="text-end">hola {{usuario}}! suscipit possimus libero? 
             <a class="btn btn-danger" href="">cerrar session <i class="fas fa-sign-out-alt"></i></a></p>
         </div>
     </div>
+
+    {{!-- Fila 2 --}}
+
+    <div class="row">
+        <div class="col-7">
+            <h3>Listado de Novedades</h3>
+
+        </div>
+        <div class="col-5 text-end" >
+            <a href="" class="btn btn-success"><i class="fas fa-plus"></i></a>
+            
+
+        </div>
+    </div>
+
+    {{!-- Fila 3 --}}
+    <div class="row">
+        <div class="col">
+      <!-- On tables -->
+<table class="table">
+  <thead>
+    <tr class="table-dark">
+      <th scope="col">#</th>
+      <th scope="col">Titulo</th>
+      <th scope="col" class="text-end">Acciones</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+      {{#each novedades}}
+    <tr>
+        <th scope="row">{{id}}</th>
+        <td>{{Titulo}}</td>
+      <td class="text-end">
+        <a href="" class="btn btn-success"><i class="fas fa-pencil-alt"></i></a> {{!-- Modificar --}}
+        <a href="" class="btn btn-secondary"><i class="fas fa-trash-alt"></i></a> {{!-- Borrar --}}
+
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+        </div>
+
+    </div>
+
 
 </div>
