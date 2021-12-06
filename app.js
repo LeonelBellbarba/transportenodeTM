@@ -34,8 +34,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
   secret: 'asdfasfadadesasarsfasasdadasdsdsad',
   resave: false,
-  saveUninitialized: true,
-  cookie:{maxAge:6000}
+  // saveUninitialized: true,
+  // cookie:{maxAge:6000}
 }));
 
 secured = async function(req, res, next){
