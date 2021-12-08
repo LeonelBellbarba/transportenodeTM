@@ -2,30 +2,10 @@
 <main class="holder">
             <h2>Novedades</h2>
             <div class="novedades">
-                <h1>TITULO</h1>
-                <h4>Subtitulo</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere adipisci velit, officia eaque expedita autem quas minima nobis ea blanditiis inventore quibusdam suscipit, magnam, nesciunt odio quia cum? Doloremque, sequi?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim rem sunt incidunt mollitia beatae quod, labore officiis nemo non recusandae, molestiae esse nulla. Saepe quisquam, adipisci temporibus eum quae at.</p>
+                {{#each novedades}}
+                <h1>{{Titulo}}</h1>
+                <h4>{{Subtitulo}}</h4>
+                <p>{{cuerpo}}</p>
                 <hr>
-
-    
-            <div class="novedades">
-                <h1>TITULO</h1>
-                <h4>Subtitulo</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere adipisci velit, officia eaque expedita autem quas minima nobis ea blanditiis inventore quibusdam suscipit, magnam, nesciunt odio quia cum? Doloremque, sequi?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim rem sunt incidunt mollitia beatae quod, labore officiis nemo non recusandae, molestiae esse nulla. Saepe quisquam, adipisci temporibus eum quae at.</p>
-                <hr>
-                
-    
-            <div class="novedades">
-                <h1>TITULO</h1>
-                <h4>Subtitulo</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere adipisci velit, officia eaque expedita autem quas minima nobis ea blanditiis inventore quibusdam suscipit, magnam, nesciunt odio quia cum? Doloremque, sequi?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim rem sunt incidunt mollitia beatae quod, labore officiis nemo non recusandae, molestiae esse nulla. Saepe quisquam, adipisci temporibus eum quae at.</p>
-                <hr>
-                
-    
-            <div class="novedades">
-                <h1>TITULO</h1>
-                <h4>Subtitulo</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere adipisci velit, officia eaque expedita autem quas minima nobis ea blanditiis inventore quibusdam suscipit, magnam, nesciunt odio quia cum? Doloremque, sequi?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim rem sunt incidunt mollitia beatae quod, labore officiis nemo non recusandae, molestiae esse nulla. Saepe quisquam, adipisci temporibus eum quae at.</p>
-                <hr>
-
+            {{/each}}
         </main>

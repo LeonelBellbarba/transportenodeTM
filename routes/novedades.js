@@ -1,8 +1,15 @@
 var express = require('express');
 var router = express.Router();
+var novedadesModel = require("../models/novedadesModels");
 
-router.get("/", function(res, res, next){
-    res.render("novedades", {isNovedades: true});
+router.get("/", async function(res, res, next){
+
+    var novedades = await novedadesModel.getNovedades();
+    res.render("novedades", {isNovedades: true, novedades});
+
+    
+
+
 
 })
 
