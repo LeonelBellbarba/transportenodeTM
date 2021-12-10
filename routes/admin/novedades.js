@@ -1,11 +1,33 @@
 var express = require("express");
 var router = express.Router();
 var novedadesModel = require("../../models/novedadesModels");
+var util = require('util');
+var cloudinary = require('cloudinary').v2;
+const uploader = util.promisify(cloudinary.uploader.upload);
 
 router.get("/", async function(req, res, next){
     
     var novedades = await novedadesModel.getNovedades();
     
+    novedades = novedades.map(novedad => {
+        if(novedad.img_id){
+            const imagen = cloudinary.image(novedad.img_id,{
+                width: 100,
+                height: 100,
+                crop:'fill'
+            });
+            return{
+                ...novedad,
+                imagen
+            }
+        }else{
+                return{
+                    ...novedad,
+                    imagen: ''
+                }
+            }
+
+    });
     
     res.render("admin/novedades",{
         layout: "admin/layout",
@@ -26,11 +48,26 @@ router.get("/agregar", function(req, res, next){
 router.post('/agregar', async(req,res,next) =>{
     try{
 
-        console.log(req.body)
+        // console.log(req.body)
+        var img_id = ''
+        if(req.files && Object.keys(req.files).length > 0){
+            imagen = req.files.imagen;
+            img_id = (await uploader(imagen.tempFilePath)).public_id;
+
+        }
+
+
         if(req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo !=""){
-            await novedadesModel.insertNovedad(req.body);
+            // await novedadesModel.insertNovedad(req.body);
+            await novedadesModel.insertNovedad({
+                ...req.body, img_id
+            })
+        
+
             res.redirect("/admin/novedades");
-        }else{
+        }
+        
+        else{
             res.render("admin/agregar",{
                 layout:"admin/layout",
                 error:true,

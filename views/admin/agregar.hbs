@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col">
             <h2>Agregar Novedad</h2>
-            <form action="/admin/novedades/agregar" method="post">
+            <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data">
 
                 <div class="mb-3">
                     <input type="text" class="form-control" id="titulo" name="titulo" placeholder="titulo">
@@ -10,6 +10,11 @@
 
                 <div class="mb-3">
                     <textarea type="text" class="form-control" id="titulo" name="subtitulo" placeholder="subtitulo"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="">IMAGEN: <input type="file" name="imagen"></label>
+
                 </div>
 
                 <div class="mb-3">

@@ -5,6 +5,9 @@
                 {{#each novedades}}
                 <h1>{{Titulo}}</h1>
                 <h4>{{Subtitulo}}</h4>
+                {{#if imagen}}
+                <img src="{{imagen}}">
+                {{/if}}
                 <p>{{cuerpo}}</p>
                 <hr>
             {{/each}}
